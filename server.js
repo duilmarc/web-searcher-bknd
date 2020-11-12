@@ -4,7 +4,7 @@ const cors = require("cors");
 server.use(express.json());
 server.use(cors());
 
-app.use(express.static(__dirname + '/dist/bweb-searcher-bk'));
+server.use(express.static(__dirname + '/dist/bweb-searcher-bk'));
 server.get("/search/:word", async (req,res) => {
     try{
         const { word } = req.params;
